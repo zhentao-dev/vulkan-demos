@@ -3,7 +3,7 @@
   <!-- avd35主线的qemu仓库 -->
   <remote fetch="ssh://stone-review/pico" name="origin" />
   <default remote="origin" revision="emu-35-rom" sync-tags="false" sync-c="true" sync-j="4" />
-  <project name="external/qemu" remote="origin" revision="feature/emu-35-rom">
+  <project name="external/qemu">
     <copyfile src="android/vscode/emu.code-workspace" dest="emu.code-workspace" />
   </project>
   
