@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- avd35主线的qemu仓库 -->
+  <remote fetch="ssh://stone-review/pico" name="origin" />
+  <default remote="origin" revision="emu-35-rom" sync-tags="false" sync-c="true" sync-j="4" />
+  <project name="external/qemu" remote="origin" revision="feature/emu-35-rom">
+    <copyfile src="android/vscode/emu.code-workspace" dest="emu.code-workspace" />
+  </project>
+  
+  <!-- github上的仓库 -->
+  <remote name="pico" fetch="git@github.com:zhentao-dev" review="git@github.com:zhentao-dev/" />
+  <project path="tools/buildSrc" name="test02_demo.git" remote="pico" revision="main"/>
+</manifest>
